@@ -1,0 +1,27 @@
+/*The tree node has data, left child and right child 
+class Node {
+    int data;
+    Node* left;
+    Node* right;
+};
+
+*/
+    int height(Node* root) {
+          int dl=0,dr=0;
+          if(root == NULL){
+              return -1;
+          }
+          else{
+               dl = height(root->left);
+               dr = height(root->right);
+               
+             if(dl>dr){
+                 return dl+1;
+                 
+             }
+             else
+             return dr+1;
+          }
+    }
+
+}; //End of Solution
